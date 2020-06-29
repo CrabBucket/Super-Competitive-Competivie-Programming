@@ -8,7 +8,6 @@ int main(){
     int n;
     cin >> n;
     vector<int> nums;
-    //nums.reserve(n);
     int temp;
     while(n--){
         cin >> temp;
