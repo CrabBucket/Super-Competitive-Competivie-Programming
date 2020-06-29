@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//Returns 2 if the two strings are not swap-free
+//Returns true if the two strings are not swap-free
 bool swapable(const string& s1, const string& s2){
 	if(&s1 == &s2) return false;
 	char a, b;

@@ -18,6 +18,7 @@ int main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
+	//input
 	int n, l;
 	cin >> n >> l;
 	int lights[n];
@@ -25,7 +26,9 @@ int main(){
 		cin >> lights[i];
 	}
 	
+	//sort list to make sequence of lights correct
 	sort(lights, lights+n);
+	//find greatest distance between 2 light poles
 	int greatestDist = 0;
 	for(int i = 1; i < n; i++){
 		if(lights[i] - lights[i-1] > greatestDist){
