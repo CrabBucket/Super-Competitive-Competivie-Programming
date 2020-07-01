@@ -19,6 +19,7 @@ int main(){
 	cin >> n;
 	nC = n;
 
+	//Use MSS algo to find longest stretch of 0's to flip
 	int sum = 0, mss = 0, ones = 0, digits[n];
 	while(n--) {
 		cin >> digits[n];
@@ -31,9 +32,11 @@ int main(){
         if(sum > mss) mss = sum;
 	}
 
+	//handle edge case
 	if(ones == nC)
 		cout << nC - 1;
 	else
+		//add # of 1s plus # of zeros flipped
 		cout << ones + mss;
 
 	return 0;
